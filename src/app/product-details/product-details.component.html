@@ -1,0 +1,51 @@
+<h3>View Product Details</h3>
+<div>
+    <div>
+        <label for="">
+            <b>ID: </b>
+            {{ product.id }}
+        </label>
+    </div>
+    <div>
+        <label for="">
+            <b>Code: </b>
+            {{ product.code }}
+        </label>
+    </div>
+    <div>
+        <label for="">
+            <b>Name: </b>
+            {{ product.name }}
+        </label>
+    </div>
+    <div>
+        <label for="">
+            <b>Description: </b>
+            {{ product.description }}
+        </label>
+    </div>
+    <div>
+        <label for="">
+            <b>Price: </b>
+            ${{ product.price }}
+        </label>
+    </div>
+    <div>
+        <label for="">
+            <b>Image URL: </b>
+            <a [href]="product.imageUrl" target="_blank">{{ product.imageUrl }}</a>
+        </label>
+    </div>
+    <div>
+        <label for="">
+            <b>Created At: </b>
+            {{ product.createdAt }}
+        </label>
+    </div>
+    <div>
+        <label for="">
+            <b>Updated At: </b>
+            {{ product.updatedAt }}
+        </label>
+    </div>
+</div>

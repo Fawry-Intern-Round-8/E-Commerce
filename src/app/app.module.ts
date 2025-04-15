@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
     declarations: [
@@ -12,7 +13,8 @@ import { FormsModule } from '@angular/forms';
         BrowserModule,
         HttpClientModule,
         AppComponent,
-        UserListComponent
+        UserListComponent,
+        ProductListComponent
     ],
     providers: [],
 })
