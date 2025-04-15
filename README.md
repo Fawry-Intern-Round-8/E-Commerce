@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ECommerce
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
@@ -61,4 +61,4 @@ For more information on using the Angular CLI, including detailed command refere
 =======
 # E-Commerce
 E-Commerce Dashboard To apply CRUD
->>>>>>> 3abbf248ff23cba0a8e47ff119c86176651942ba
+
