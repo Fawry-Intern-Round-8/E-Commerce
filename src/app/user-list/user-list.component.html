@@ -10,6 +10,7 @@
             <th>Created At</th>
             <th>Updated At</th>
             <th>Last Login</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +23,10 @@
             <td>{{user.createdAt}}</td>
             <td>{{user.updatedAt}}</td>
             <td>{{user.lastLogin}}</td>
+            <td>
+                <button (click)="updateUser(user.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteUser(user.id)" class="btn btn-danger">Delete</button>
+            </td>
         </tr>
     </tbody>
 </table>

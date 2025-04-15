@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { User } from '../user';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-user-list',
@@ -13,13 +14,21 @@ import { UserService } from '../user.service';
 })
 export class UserListComponent implements OnInit {
     users!: User[];
-    constructor(private userService: UserService) { }
+    constructor(private userService: UserService, private router: Router) { }
     ngOnInit(): void {
         this.getUserList();
     }
     getUserList() {
         this.userService.getUserList().subscribe(data => {
             this.users = data;
+        });
+    }
+    updateUser(id: number) {
+        this.router.navigate(['update-user', id]);
+    }
+    deleteUser(id: number) {
+        this.userService.deleteUser(id).subscribe(() => {
+            this.getUserList();
         });
     }
 }

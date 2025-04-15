@@ -14,7 +14,20 @@ export class UserService {
         return this.httpClient.get<User[]>(this.baseURL);
     }
 
+    getUserById(id: number): Observable<User> {
+        return this.httpClient.get<User>(`${this.baseURL}/${id}`);
+    }
+
     addUser(user: User): Observable<User> {
         return this.httpClient.post<User>(this.baseURL, user);
+    }
+
+    updateUser(id: number, user: User): Observable<User> {
+        user.updatedAt = new Date();
+        return this.httpClient.put<User>(`${this.baseURL}/${id}`, user);
+    }
+
+    deleteUser(id: number): Observable<void> {
+        return this.httpClient.delete<void>(`${this.baseURL}/${id}`);
     }
 }
