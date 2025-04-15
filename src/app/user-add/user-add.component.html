@@ -1,0 +1,36 @@
+<div class="col-md offset-md-3">
+    <h3>Create User</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <select class="form-control" id="status" name="status" [(ngModel)]="user.status" required>
+                <option [ngValue]="true">Active</option>
+                <option [ngValue]="false">Inactive</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="createdAt">Created At</label>
+            <input type="datetime-local" class="form-control" id="createdAt" name="createdAt"
+                [(ngModel)]="user.createdAt" required>
+        </div>
+        <div class="form-group">
+            <label for="updatedAt">Updated At</label>
+            <input type="datetime-local" class="form-control" id="updatedAt" name="updatedAt"
+                [(ngModel)]="user.updatedAt" required>
+        </div>
+        <button type="submit" class="btn btn-success">Create User</button>
+    </form>
+</div>
