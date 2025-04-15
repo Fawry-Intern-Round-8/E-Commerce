@@ -21,16 +21,6 @@
                 <option [ngValue]="false">Inactive</option>
             </select>
         </div>
-        <div class="form-group">
-            <label for="createdAt">Created At</label>
-            <input type="datetime-local" class="form-control" id="createdAt" name="createdAt"
-                [(ngModel)]="user.createdAt" required>
-        </div>
-        <div class="form-group">
-            <label for="updatedAt">Updated At</label>
-            <input type="datetime-local" class="form-control" id="updatedAt" name="updatedAt"
-                [(ngModel)]="user.updatedAt" required>
-        </div>
         <button type="submit" class="btn btn-success">Create User</button>
     </form>
 </div>

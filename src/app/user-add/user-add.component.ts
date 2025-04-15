@@ -27,7 +27,8 @@ export class UserAddComponent implements OnInit {
     }
 
     console.log('Sending user data:', this.user);
-
+    this.user.createdAt = new Date();
+    this.user.updatedAt = new Date();
     this.userService.addUser(this.user).subscribe(
       data => {
         console.log('Success:', data);

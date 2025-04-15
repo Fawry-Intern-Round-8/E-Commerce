@@ -31,4 +31,7 @@ export class UserListComponent implements OnInit {
             this.getUserList();
         });
     }
+    viewUser(id: number) {
+        this.router.navigate(['user-details', id]);
+    }
 }

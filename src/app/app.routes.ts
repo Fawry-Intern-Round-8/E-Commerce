@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserAddComponent } from './user-add/user-add.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 export const routes: Routes = [
     {
         path: 'users',
@@ -19,5 +20,9 @@ export const routes: Routes = [
     {
         path: 'update-user/:id',
         component: UserUpdateComponent
+    },
+    {
+        path: 'user-details/:id',
+        component: UserDetailsComponent
     }
 ];
