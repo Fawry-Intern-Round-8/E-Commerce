@@ -7,6 +7,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { StoreListComponent } from './store-list/store-list.component';
+import { StoreAddComponent } from './store-add/store-add.component';
 export const routes: Routes = [
     {
         path: 'users',
@@ -16,12 +18,20 @@ export const routes: Routes = [
         component: ProductListComponent
     },
     {
+        path: 'stores',
+        component: StoreListComponent
+    },
+    {
         path: 'create-user',
         component: UserAddComponent
     },
     {
         path: 'create-product',
         component: ProductAddComponent
+    },
+    {
+        path: 'create-store',
+        component: StoreAddComponent
     },
     {
         path: '',

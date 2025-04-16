@@ -1,0 +1,27 @@
+<h2>Store List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let store of stores">
+            <td>{{store.id}}</td>
+            <td>{{store.name}}</td>
+            <td>{{store.address}}</td>
+            <td>{{store.longitude}}</td>
+            <td>{{store.latitude}}</td>
+            <td>
+                <button (click)="updateStore(store.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteStore(store.id)" class="btn btn-danger">Delete</button>
+                <button (click)="viewStore(store.id)" class="btn btn-info">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
