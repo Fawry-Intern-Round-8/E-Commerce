@@ -9,6 +9,8 @@ import { ProductUpdateComponent } from './product-update/product-update.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { StoreListComponent } from './store-list/store-list.component';
 import { StoreAddComponent } from './store-add/store-add.component';
+import { StoreUpdateComponent } from './store-update/store-update.component';
+import { StoreDetailsComponent } from './store-details/store-details.component';
 export const routes: Routes = [
     {
         path: 'users',
@@ -47,11 +49,19 @@ export const routes: Routes = [
         component: ProductUpdateComponent
     },
     {
+        path: 'update-store/:id',
+        component: StoreUpdateComponent
+    },
+    {
         path: 'user-details/:id',
         component: UserDetailsComponent
     },
     {
         path: 'product-details/:id',
         component: ProductDetailsComponent
+    },
+    {
+        path: 'store-details/:id',
+        component: StoreDetailsComponent
     }
 ];
