@@ -11,6 +11,10 @@ import { StoreListComponent } from './store-list/store-list.component';
 import { StoreAddComponent } from './store-add/store-add.component';
 import { StoreUpdateComponent } from './store-update/store-update.component';
 import { StoreDetailsComponent } from './store-details/store-details.component';
+import { StockAddComponent } from './stock-add/stock-add.component';
+import { StockListComponent } from './stock-list/stock-list.component';
+import { StockDetailsComponent } from './stock-details/stock-details.component';
+import { StockUpdateComponent } from './stock-update/stock-update.component';
 export const routes: Routes = [
     {
         path: 'users',
@@ -24,6 +28,10 @@ export const routes: Routes = [
         component: StoreListComponent
     },
     {
+        path: 'stocks',
+        component: StockListComponent
+    },
+    {
         path: 'create-user',
         component: UserAddComponent
     },
@@ -34,6 +42,10 @@ export const routes: Routes = [
     {
         path: 'create-store',
         component: StoreAddComponent
+    },
+    {
+        path: 'create-stock',
+        component: StockAddComponent
     },
     {
         path: '',
@@ -53,6 +65,10 @@ export const routes: Routes = [
         component: StoreUpdateComponent
     },
     {
+        path: 'update-stock/:id',
+        component: StockUpdateComponent
+    },
+    {
         path: 'user-details/:id',
         component: UserDetailsComponent
     },
@@ -63,5 +79,9 @@ export const routes: Routes = [
     {
         path: 'store-details/:id',
         component: StoreDetailsComponent
+    },
+    {
+        path: 'stock-details/:id',
+        component: StockDetailsComponent
     }
 ];
