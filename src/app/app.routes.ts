@@ -17,6 +17,9 @@ import { StockDetailsComponent } from './stock-details/stock-details.component';
 import { StockUpdateComponent } from './stock-update/stock-update.component';
 import { TransactionsListComponent } from './transactions-list/transactions-list.component';
 import { TransactionsDetailsComponent } from './transactions-details/transactions-details.component';
+import { CouponListComponent } from './coupon-list/coupon-list.component';
+import { CouponAddComponent } from './coupon-add/coupon-add.component';
+import { CouponUpdateComponent } from './coupon-update/coupon-update.component';
 export const routes: Routes = [
     {
         path: 'transactions',
@@ -38,6 +41,10 @@ export const routes: Routes = [
         component: StockListComponent
     },
     {
+        path: 'coupons',
+        component: CouponListComponent
+    },
+    {
         path: 'create-user',
         component: UserAddComponent
     },
@@ -52,6 +59,10 @@ export const routes: Routes = [
     {
         path: 'create-stock',
         component: StockAddComponent
+    },
+    {
+        path: 'create-coupon',
+        component: CouponAddComponent
     },
     {
         path: '',
@@ -69,6 +80,10 @@ export const routes: Routes = [
     {
         path: 'update-store/:id',
         component: StoreUpdateComponent
+    },
+    {
+        path: 'update-coupon/:id',
+        component: CouponUpdateComponent
     },
     {
         path: 'update-stock/:id',

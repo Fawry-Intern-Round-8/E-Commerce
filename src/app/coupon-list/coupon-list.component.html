@@ -1,0 +1,36 @@
+<h2>Coupon List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Code</th>
+            <th>Discount Type</th>
+            <th>Value</th>
+            <th>Max Usages</th>
+            <th>Current Usages</th>
+            <th>Expiry Date</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let coupon of coupons">
+            <td>{{coupon.id}}</td>
+            <td>{{coupon.code}}</td>
+            <td>{{coupon.discountType}}</td>
+            <td>{{coupon.value}} {{coupon.discountType === 'PERCENTAGE' ? '%' : '$'}}</td>
+            <td>{{coupon.maxUsages}}</td>
+            <td>{{coupon.currentUsages}}</td>
+            <td>{{coupon.expiryDate | date:'mediumDate'}}</td>
+            <td>{{coupon.createdAt | date:'mediumDate'}}</td>
+            <td>{{coupon.updatedAt | date:'mediumDate'}}</td>
+            <td>{{coupon.isActive ? 'Active' : 'Inactive'}}</td>
+            <td>
+                <button (click)="updateCoupon(coupon.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteCoupon(coupon.id)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

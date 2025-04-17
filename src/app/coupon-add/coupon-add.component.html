@@ -1,0 +1,39 @@
+<div class="col-md offset-md-3">
+    <h3>Create Coupon</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="code">Coupon Code</label>
+            <input type="text" class="form-control" id="code" name="code" [(ngModel)]="coupon.code" required>
+        </div>
+        <div class="form-group">
+            <label for="discountType">Discount Type</label>
+            <select class="form-control" id="discountType" name="discountType" [(ngModel)]="coupon.discountType"
+                required>
+                <option value="PERCENTAGE">PERCENTAGE</option>
+                <option value="FIXED">FIXED</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="value">Value</label>
+            <input type="number" class="form-control" id="value" name="value" [(ngModel)]="coupon.value" required>
+            <small class="form-text text-muted">
+                {{ coupon.discountType === 'PERCENTAGE' ? 'Percentage discount (0-100)' : 'Fixed amount discount' }}
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="maxUsages">Maximum Usages</label>
+            <input type="number" class="form-control" id="maxUsages" name="maxUsages" [(ngModel)]="coupon.maxUsages"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="expiryDate">Expiry Date</label>
+            <input type="date" class="form-control" id="expiryDate" name="expiryDate" [(ngModel)]="coupon.expiryDate"
+                required>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="isActive" name="isActive" [(ngModel)]="coupon.isActive">
+            <label class="form-check-label" for="isActive">Active</label>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Create Coupon</button>
+    </form>
+</div>
