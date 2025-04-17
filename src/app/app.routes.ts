@@ -15,8 +15,14 @@ import { StockAddComponent } from './stock-add/stock-add.component';
 import { StockListComponent } from './stock-list/stock-list.component';
 import { StockDetailsComponent } from './stock-details/stock-details.component';
 import { StockUpdateComponent } from './stock-update/stock-update.component';
+import { TransactionsListComponent } from './transactions-list/transactions-list.component';
+import { TransactionsDetailsComponent } from './transactions-details/transactions-details.component';
 export const routes: Routes = [
     {
+        path: 'transactions',
+        component: TransactionsListComponent
+    }
+    , {
         path: 'users',
         component: UserListComponent
     }, {
@@ -67,6 +73,10 @@ export const routes: Routes = [
     {
         path: 'update-stock/:id',
         component: StockUpdateComponent
+    },
+    {
+        path: 'transactions-details/:id',
+        component: TransactionsDetailsComponent
     },
     {
         path: 'user-details/:id',

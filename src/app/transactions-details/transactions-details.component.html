@@ -1,0 +1,51 @@
+<h3>View Transaction Details</h3>
+<div>
+    <div>
+        <label>
+            <b>ID: </b>
+            {{this.transaction.transactionId}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>Store ID: </b>
+            {{this.transaction.storeId}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>Product ID: </b>
+            {{this.transaction.productId}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>Old Quantity: </b>
+            {{this.transaction.oldQuantity}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>New Quantity: </b>
+            {{this.transaction.newQuantity}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>Transaction Type: </b>
+            {{this.transaction.transactionType}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>Created At: </b>
+            {{this.transaction.createdAt | date:'medium'}}
+        </label>
+    </div>
+    <div>
+        <label>
+            <b>Consumer Email: </b>
+            {{this.transaction.consumerEmail}}
+        </label>
+    </div>
+</div>

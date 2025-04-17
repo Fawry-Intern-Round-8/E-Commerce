@@ -1,0 +1,31 @@
+<h2>Transaction List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Store ID</th>
+            <th>Product ID</th>
+            <th>Old Quantity</th>
+            <th>New Quantity</th>
+            <th>Transaction Type</th>
+            <th>Created At</th>
+            <th>Consumer Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let transaction of transactions">
+            <td>{{transaction.transactionId}}</td>
+            <td>{{transaction.storeId}}</td>
+            <td>{{transaction.productId}}</td>
+            <td>{{transaction.oldQuantity}}</td>
+            <td>{{transaction.newQuantity}}</td>
+            <td>{{transaction.transactionType}}</td>
+            <td>{{transaction.createdAt | date:'medium'}}</td>
+            <td>{{transaction.consumerEmail}}</td>
+            <td>
+                <button (click)="viewTransaction(transaction.transactionId)" class="btn btn-info">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
